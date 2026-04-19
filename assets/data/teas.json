@@ -1,0 +1,97 @@
+[
+  {
+    "id": "matcha",
+    "name": "Matcha",
+    "originalName": "抹茶",
+    "category": "te_verde",
+    "countryOfOrigin": "Giappone",
+    "region": "Uji, Kyoto",
+    "caffeine": "alta",
+    "temperatureC": [70, 80],
+    "infusionSec": [60, 90],
+    "aromas": ["Umami", "Erbaceo", "Dolce", "Vegetale"],
+    "history": "Portato in Giappone nel XII secolo dal monaco Eisai, il matcha divenne centrale nella cerimonia del tè (chanoyu) codificata da Sen no Rikyū nel XVI secolo, basata sui principi di armonia, rispetto, purezza e tranquillità.",
+    "preparation": "Setaccia 1-2 g di polvere in una ciotola chawan. Aggiungi 60-80 ml di acqua a 70-80°C. Frusta con il chasen (frullino di bambù) con movimento a W fino a ottenere una schiuma cremosa.",
+    "funFacts": [
+      "Le foglie crescono all'ombra per 3 settimane prima della raccolta, aumentando clorofilla e teanina",
+      "Viene macinato a pietra con mulini tradizionali che producono solo 30-40 grammi di polvere all'ora",
+      "Contiene circa 10 volte gli antiossidanti di un tè verde normale"
+    ]
+  },
+  {
+    "id": "darjeeling_first_flush",
+    "name": "Darjeeling First Flush",
+    "originalName": null,
+    "category": "te_nero",
+    "countryOfOrigin": "India",
+    "region": "Darjeeling, Bengala Occidentale",
+    "caffeine": "media",
+    "temperatureC": [85, 90],
+    "infusionSec": [180, 240],
+    "aromas": ["Floreale", "Muschiato", "Fresco", "Astringente leggero"],
+    "history": "Il Darjeeling è coltivato sulle pendici himalayane dal 1841, quando il chirurgo scozzese Archibald Campbell impiantò i primi cespugli. Il First Flush è il primo raccolto primaverile (marzo-aprile) e produce il tè più pregiato e delicato della regione.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 85-90°C. Infondi per 3-4 minuti. Da bere idealmente senza latte né zucchero per apprezzare le note delicate.",
+    "funFacts": [
+      "È chiamato lo 'champagne dei tè' per la sua complessità aromatica",
+      "Ha l'indicazione geografica protetta dal 2004, primo tè a riceverla",
+      "Ogni anno si producono appena 8-10 milioni di kg, una frazione minuscola del mercato globale"
+    ]
+  },
+  {
+    "id": "earl_grey",
+    "name": "Earl Grey",
+    "originalName": null,
+    "category": "te_nero",
+    "countryOfOrigin": "Regno Unito",
+    "region": "Miscela (tradizionalmente basata su tè cinesi e indiani)",
+    "caffeine": "media",
+    "temperatureC": [95, 100],
+    "infusionSec": [180, 240],
+    "aromas": ["Bergamotto", "Agrumato", "Floreale", "Tannico"],
+    "history": "Prende il nome da Charles Grey, Primo Ministro britannico negli anni 1830. Secondo la leggenda fu creato da un diplomatico cinese in dono al conte dopo che un suo uomo salvò la vita al figlio. La ricetta originale combina tè nero con olio essenziale di bergamotto calabrese.",
+    "preparation": "Usa 2-3 g di foglie per 200 ml di acqua bollente (95-100°C). Infondi per 3-4 minuti. Ottimo sia liscio sia con una nuvola di latte, secondo la tradizione inglese.",
+    "funFacts": [
+      "Il bergamotto usato proviene quasi interamente dalla costa ionica della Calabria",
+      "Esistono varianti come il Lady Grey (con fiori d'arancio) e il French Earl Grey (con petali di fiori)",
+      "Twinings ha depositato la ricetta storica nel 1831 ma il nome Earl Grey non è un marchio protetto"
+    ]
+  },
+  {
+    "id": "camomilla",
+    "name": "Camomilla",
+    "originalName": "Matricaria chamomilla",
+    "category": "tisana",
+    "countryOfOrigin": "Europa, Asia occidentale",
+    "region": "Coltivata principalmente in Egitto, Germania, Italia",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [300, 420],
+    "aromas": ["Floreale", "Mielato", "Erbaceo", "Leggermente amaro"],
+    "history": "Usata come rimedio calmante fin dall'antico Egitto, dove era dedicata al dio solare Ra. Dioscoride e Plinio il Vecchio la descrissero tra le erbe officinali nel I secolo. In Italia la camomilla è l'infuso più consumato, con tradizione di bevanda serale rilassante.",
+    "preparation": "Infondi un cucchiaio di fiori essiccati (o una bustina) in 200 ml di acqua bollente. Copri e lascia in infusione 5-7 minuti per estrarre i principi attivi. Filtra e bevi preferibilmente la sera.",
+    "funFacts": [
+      "Contiene apigenina, flavonoide che si lega ai recettori GABA con effetto rilassante naturale",
+      "I fiori freschi hanno un profumo più simile alla mela (da cui il nome greco khamaimēlon, 'mela a terra')",
+      "In Italia si consuma in media 1 kg di fiori di camomilla a persona all'anno"
+    ]
+  },
+  {
+    "id": "rooibos",
+    "name": "Rooibos",
+    "originalName": "Aspalathus linearis",
+    "category": "tisana",
+    "countryOfOrigin": "Sud Africa",
+    "region": "Cederberg, Capo Occidentale",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [300, 420],
+    "aromas": ["Dolce", "Terroso", "Nocciola", "Vanigliato"],
+    "history": "Usato da secoli dai Khoisan sudafricani, il rooibos (pronuncia 'roibos', significa 'cespuglio rosso' in afrikaans) fu introdotto al mercato occidentale negli anni '30 del Novecento dal botanico Benjamin Ginsberg. La pianta cresce esclusivamente nella regione montuosa del Cederberg.",
+    "preparation": "Usa 2-3 g di foglie rosse per 200 ml di acqua bollente. Infondi 5-7 minuti (può anche essere più lungo senza diventare amaro). Ottimo da solo, con miele o con latte freddo in estate.",
+    "funFacts": [
+      "Non contiene teina né caffeina, adatto anche a bambini e sera tarda",
+      "Ha 50 volte meno tannini del tè nero, quindi non diventa amaro con infusioni lunghe",
+      "Esiste anche il rooibos verde, non ossidato, con profilo più erbaceo e leggero"
+    ]
+  }
+]
