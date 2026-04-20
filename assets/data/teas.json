@@ -19,6 +19,139 @@
     ]
   },
   {
+    "id": "gyokuro",
+    "name": "Gyokuro",
+    "originalName": "玉露",
+    "category": "te_verde",
+    "countryOfOrigin": "Giappone",
+    "region": "Yame, Fukuoka",
+    "caffeine": "alta",
+    "temperatureC": [50, 60],
+    "infusionSec": [90, 120],
+    "aromas": ["Umami", "Marino", "Dolce", "Erbaceo"],
+    "history": "Creato intorno al 1835 da Yamamoto Kahei VI a Uji, il gyokuro è il tè verde di più alto grado in Giappone. Il nome significa 'rugiada di giada', che richiama il colore verde brillante dell'infuso e la freschezza del profumo.",
+    "preparation": "Usa 4-5 g di foglie per 60 ml di acqua a 50-60°C. Infondi per 90-120 secondi. La bassa temperatura è essenziale: estrae la teanina dolce senza liberare l'amaro delle catechine. Può essere reinfuso due volte.",
+    "funFacts": [
+      "Le piante vengono ombreggiate con teli per 20-30 giorni prima della raccolta, triplicando il contenuto di teanina",
+      "La copertura limita la fotosintesi, concentrando clorofilla e aminoacidi che danno la nota umami",
+      "Produce meno di 200 g per pianta all'anno, rendendolo tra i tè giapponesi più costosi"
+    ]
+  },
+  {
+    "id": "sencha",
+    "name": "Sencha",
+    "originalName": "煎茶",
+    "category": "te_verde",
+    "countryOfOrigin": "Giappone",
+    "region": "Shizuoka",
+    "caffeine": "media",
+    "temperatureC": [70, 80],
+    "infusionSec": [60, 90],
+    "aromas": ["Erbaceo", "Fresco", "Vegetale", "Marino"],
+    "history": "Il sencha è il tè giapponese per eccellenza, inventato nel XVIII secolo da Nagatani Soen che sviluppò la tecnica di vapore e arrotolamento delle foglie che è ancora in uso. Rappresenta circa il 70% della produzione nazionale di tè.",
+    "preparation": "Usa 3-4 g di foglie per 150 ml di acqua a 70-80°C. Infondi per 60-90 secondi. Le foglie a foglia aperta si reinfondono bene: la seconda infusione è più delicata, la terza più amara e rinfrescante.",
+    "funFacts": [
+      "Le foglie vengono vaporate subito dopo la raccolta per bloccare l'ossidazione, tecnica chiamata steamfixing",
+      "Shizuoka produce circa il 40% di tutto il tè giapponese, in un territorio benedetto dal Monte Fuji",
+      "Il sencha è ricco di EGCG (epigallocatechina gallato), una catechina tra le più studiate per le proprietà antiossidanti"
+    ]
+  },
+  {
+    "id": "longjing",
+    "name": "Longjing",
+    "originalName": "龙井茶",
+    "category": "te_verde",
+    "countryOfOrigin": "Cina",
+    "region": "Hangzhou, Zhejiang",
+    "caffeine": "media",
+    "temperatureC": [75, 85],
+    "infusionSec": [120, 180],
+    "aromas": ["Vegetale", "Tostato", "Dolce", "Fresco"],
+    "history": "Uno dei tè più famosi della Cina, consumato dalla dinastia Song (X-XIII sec.). L'imperatore Qianlong della dinastia Qing visitò i Diciotto Cespugli Imperiali a Longjing nel 1765 e ne restò così colpito da dedicargli una poesia. Il nome significa 'Pozzo del Drago'.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 75-85°C. Infondi per 2-3 minuti. Le foglie piatte e spade affondano lentamente: è normale. Evita l'acqua troppo calda, che renderebbe amaro il liquore.",
+    "funFacts": [
+      "Le foglie vengono appiattite a mano in una padella rovente, in un processo chiamato sha qing (uccisione del verde)",
+      "I Diciotto Cespugli Imperiali esistono ancora oggi a Longjing e il loro tè viene venduto a migliaia di euro al chilo",
+      "È una denominazione di origine protetta dal 2001: solo il tè di specifiche aree di Hangzhou può chiamarsi Longjing"
+    ]
+  },
+  {
+    "id": "gunpowder",
+    "name": "Gunpowder",
+    "originalName": "珠茶",
+    "category": "te_verde",
+    "countryOfOrigin": "Cina",
+    "region": "Pingshui, Zhejiang",
+    "caffeine": "media",
+    "temperatureC": [75, 85],
+    "infusionSec": [180, 240],
+    "aromas": ["Terroso", "Fumoso", "Erbaceo", "Leggermente amaro"],
+    "history": "Prodotto nella provincia dello Zhejiang dal VII secolo, il gunpowder prende il nome dalle sue foglie arrotolate in piccole sfere che i commercianti britannici del XVIII secolo paragonarono alla polvere da sparo. Arrivato in Marocco tramite i mercanti arabi, è diventato la base del tradizionale tè alla menta nordafricano.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 75-85°C. Infondi per 3-4 minuti. Le palline si aprono lentamente durante l'infusione. Per il tè alla menta marocchino, aggiungi foglie fresche di menta e zucchero abbondante.",
+    "funFacts": [
+      "Le foglie vengono arrotolate in sfere compatte per preservarne la freschezza durante i lunghi trasporti",
+      "Più la pallina è piccola e compatta, più alta è la qualità del tè",
+      "È la base dell'atay, il tè alla menta marocchino, versato da altezza con gesto rituale per creare la schiuma"
+    ]
+  },
+  {
+    "id": "bancha",
+    "name": "Bancha",
+    "originalName": "番茶",
+    "category": "te_verde",
+    "countryOfOrigin": "Giappone",
+    "region": "Shizuoka",
+    "caffeine": "bassa",
+    "temperatureC": [80, 90],
+    "infusionSec": [30, 60],
+    "aromas": ["Erbaceo", "Tostato", "Terroso", "Fresco"],
+    "history": "Il tè di tutti i giorni in Giappone, raccolto nel tardo autunno dalle stesse piante del sencha, ma con foglie più grandi e mature. Considerato un tè umile, è servito gratuitamente in molti ristoranti giapponesi ed è la base del genmaicha (con riso tostato) e dell'hojicha.",
+    "preparation": "Usa 4-5 g di foglie per 200 ml di acqua a 80-90°C. Infondi solo 30-60 secondi per evitare l'amaro. La velocità è la sua caratteristica: è il tè giapponese più immediato da preparare.",
+    "funFacts": [
+      "Il nome ban significa 'tardivo': è l'ultimo raccolto dell'anno, effettuato in estate e autunno",
+      "Il basso contenuto di caffeina lo rende adatto anche a bambini e anziani",
+      "Mischiato con riso soffiato tostato diventa genmaicha, il tè 'pop corn' dal profumo caldo e avvolgente"
+    ]
+  },
+  {
+    "id": "bi_luo_chun",
+    "name": "Bi Luo Chun",
+    "originalName": "碧螺春",
+    "category": "te_verde",
+    "countryOfOrigin": "Cina",
+    "region": "Lago Tai, Jiangsu",
+    "caffeine": "media",
+    "temperatureC": [70, 80],
+    "infusionSec": [120, 180],
+    "aromas": ["Floreale", "Fruttato", "Dolce", "Fresco"],
+    "history": "Uno dei dieci tè più famosi della Cina. L'imperatore Kangxi lo ribattezzò Bi Luo Chun ('Chiocciola di giada primaverile') nel XVII secolo, ripudiando il nome volgare precedente. Cresce tra pescheti e alberi di albicocca nel monte Dongting, assorbendone gli aromi.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 70-80°C. A differenza di molti tè, aggiungi prima le foglie e poi l'acqua: le delicate foglie arrotolate scendono lentamente nell'acqua calda in un effetto scenografico. Infondi 2-3 minuti.",
+    "funFacts": [
+      "Le piante crescono tra alberi da frutto: il tè assorbe naturalmente note fruttate senza aromi aggiunti",
+      "Per 500 g di tè finito vengono raccolte a mano circa 70.000 gemme singole",
+      "Le foglie sono ricoperte di sottili peluria bianca visibile: è un indicatore di qualità, non un difetto"
+    ]
+  },
+  {
+    "id": "hojicha",
+    "name": "Hojicha",
+    "originalName": "焙じ茶",
+    "category": "te_verde",
+    "countryOfOrigin": "Giappone",
+    "region": "Kyoto",
+    "caffeine": "bassa",
+    "temperatureC": [90, 100],
+    "infusionSec": [30, 60],
+    "aromas": ["Tostato", "Nocciola", "Caramellato", "Dolce"],
+    "history": "Inventato a Kyoto negli anni '20 del Novecento da un commerciante di tè che tostò le foglie di bancha in eccesso per renderle più appetibili. La tostatura ad alta temperatura (200°C) trasforma radicalmente il profilo aromatico, creando note di caramello e nocciola uniche tra i tè verdi.",
+    "preparation": "Usa 4-5 g di foglie per 200 ml di acqua a 90-100°C. Infondi solo 30-60 secondi. La tostatura permette di usare acqua bollente senza estrarre amaro. Ottimo anche freddo, in infusione a freddo per 8 ore in frigorifero.",
+    "funFacts": [
+      "La tostatura a 200°C riduce il contenuto di caffeina fino al 50% rispetto al bancha originale",
+      "È l'unico tè verde giapponese che si prepara con acqua quasi bollente",
+      "In Giappone è usato come base per gelati, cioccolate e dessert, grazie alle note caramellate che reggono bene ai dolci"
+    ]
+  },
+  {
     "id": "darjeeling_first_flush",
     "name": "Darjeeling First Flush",
     "originalName": null,
@@ -57,6 +190,215 @@
     ]
   },
   {
+    "id": "assam",
+    "name": "Assam",
+    "originalName": null,
+    "category": "te_nero",
+    "countryOfOrigin": "India",
+    "region": "Valle del Brahmaputra, Assam",
+    "caffeine": "alta",
+    "temperatureC": [95, 100],
+    "infusionSec": [180, 300],
+    "aromas": ["Maltato", "Terroso", "Speziato", "Tannico"],
+    "history": "Il botanico Robert Bruce scoprì nel 1823 piante di Camellia sinensis var. assamica cresciute allo stato selvatico in Assam, dimostrando che non solo la Cina poteva produrre tè. La prima piantagione commerciale aprì nel 1839, dando il via alla più grande industria del tè al mondo.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 95-100°C. Infondi per 3-5 minuti. Regge bene l'aggiunta di latte e zucchero. È la base tradizionale del masala chai: uniscilo a latte, cardamomo, zenzero, cannella e chiodi di garofano.",
+    "funFacts": [
+      "L'Assam produce circa 700 milioni di kg di tè all'anno, quasi il 50% dell'intera produzione indiana",
+      "La varietà assamica ha foglie due-tre volte più grandi della varietà cinese sinensis",
+      "La valle del Brahmaputra ha condizioni uniche: piogge monsoniche abbondanti e terreni alluvionali ricchi creano il caratteristico profilo maltato"
+    ]
+  },
+  {
+    "id": "ceylon_nuwara_eliya",
+    "name": "Ceylon Nuwara Eliya",
+    "originalName": null,
+    "category": "te_nero",
+    "countryOfOrigin": "Sri Lanka",
+    "region": "Nuwara Eliya",
+    "caffeine": "media",
+    "temperatureC": [90, 95],
+    "infusionSec": [240, 300],
+    "aromas": ["Agrumato", "Floreale", "Fresco", "Speziato"],
+    "history": "La coltivazione del tè in Sri Lanka iniziò nel 1867 quando il piantatore scozzese James Taylor aprì la prima piantagione commerciale a Kandy. Dopo che un fungo distrusse le piantagioni di caffè, il tè divenne la coltura principale. Sri Lanka conserva il nome Ceylon per il suo tè nonostante il cambio di nome nel 1972.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 90-95°C. Infondi per 4-5 minuti. Ottimo liscio per apprezzare le note floreali e agrumate di Nuwara Eliya, la zona di alta quota (1.800 m) considerata lo champagne del Ceylon.",
+    "funFacts": [
+      "Nuwara Eliya è chiamato 'Little England' per il clima fresco e nebbia simile all'Inghilterra, dove i colonizzatori britannici si ritiravano d'estate",
+      "Lo Sri Lanka è il quarto produttore mondiale di tè e il primo per export di tè nero sfuso",
+      "Le alte altitudini rallentano la crescita delle foglie, concentrando aromi e rendendo il tè più complesso"
+    ]
+  },
+  {
+    "id": "lapsang_souchong",
+    "name": "Lapsang Souchong",
+    "originalName": "正山小种",
+    "category": "te_nero",
+    "countryOfOrigin": "Cina",
+    "region": "Wuyi, Fujian",
+    "caffeine": "media",
+    "temperatureC": [90, 95],
+    "infusionSec": [180, 240],
+    "aromas": ["Affumicato", "Resinoso", "Speziato", "Fruttato"],
+    "history": "Uno dei primi tè neri al mondo, nato per leggenda durante la dynasty Qing quando soldati occuparono una fabbrica del tè in Fujian. I lavoratori, per accelerare l'essiccazione in ritardo, usarono legna di pino: l'affumicatura divenne il tratto distintivo. Il nome significa 'piccola varietà dalla montagna originale'.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 90-95°C. Infondi per 3-4 minuti. Il sapore affumicato è potente: se è la prima volta, inizia con meno foglie. Regge bene un goccio di latte freddo che ne ammorbidisce l'intensità.",
+    "funFacts": [
+      "L'affumicatura avviene bruciando legno di pino cinese rosso (Pinus massoniana), che conferisce la nota resinosa caratteristica",
+      "Winston Churchill era un appassionato dichiarato di Lapsang Souchong, che beveva ogni mattina",
+      "Esiste una versione non affumicata dello stesso tè, chiamata Zhengshan Xiaozhong, con note fruttate e mielose"
+    ]
+  },
+  {
+    "id": "yunnan_golden_tips",
+    "name": "Yunnan Golden Tips",
+    "originalName": "滇红",
+    "category": "te_nero",
+    "countryOfOrigin": "Cina",
+    "region": "Yunnan",
+    "caffeine": "media",
+    "temperatureC": [90, 95],
+    "infusionSec": [180, 240],
+    "aromas": ["Mielato", "Cioccolatoso", "Maltato", "Dolce"],
+    "history": "Creato nel 1939 da Feng Shaoqiu su incarico del governo nazionalista cinese, che voleva un tè nero di pregio per l'export. Lo Yunnan, con i suoi alberi di Camellia sinensis millenari, si rivelò la sede perfetta. I 'golden tips' sono le gemme dorate, ricche di polifenoli.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 90-95°C. Infondi per 3-4 minuti. Le gemme dorate rilasciano un liquore ambrato con sentori di miele e cioccolato fondente. Ottimo senza latte per non coprire la dolcezza naturale.",
+    "funFacts": [
+      "Le punte dorate sono le gemme apicali ricoperte di peluria chiara: il colore oro intensifica dopo l'ossidazione",
+      "Lo Yunnan ospita alberi selvatici di Camellia sinensis con oltre 1.000 anni di età, i più antichi al mondo",
+      "È uno dei pochi tè neri cinesi prodotto in alta quota (1.200-2.000 m), che rallenta la crescita e arricchisce il sapore"
+    ]
+  },
+  {
+    "id": "keemun",
+    "name": "Keemun",
+    "originalName": "祁门红茶",
+    "category": "te_nero",
+    "countryOfOrigin": "Cina",
+    "region": "Qimen, Anhui",
+    "caffeine": "media",
+    "temperatureC": [90, 95],
+    "infusionSec": [180, 240],
+    "aromas": ["Floreale", "Fruttato", "Vinoso", "Speziato"],
+    "history": "Inventato nel 1875 dall'ex funzionario imperiale Yu Quianchen, che apprese le tecniche di lavorazione del tè nero nel Fujian e le portò ad Anhui. Il Keemun vinse la medaglia d'oro all'Esposizione Panama-Pacific del 1915 e divenne uno dei tè neri cinesi più apprezzati in Occidente.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua a 90-95°C. Infondi per 3-4 minuti. Il profilo delicato e floreale si apprezza meglio senza latte. In Cina è chiamato Gongfu Hong Cha, tè nero della maestria, per il processo laborioso che richiede.",
+    "funFacts": [
+      "Insieme a Darjeeling e Uva (Sri Lanka), è classificato tra i 'tre tè ad alto aroma' del mondo",
+      "Il caratteristico profumo floreale-fruttato, detto 'aroma di Keemun', ricorda rosa e orchidea",
+      "È uno dei componenti originali dell'English Breakfast blend, che ne sfrutta la struttura tannica equilibrata"
+    ]
+  },
+  {
+    "id": "english_breakfast",
+    "name": "English Breakfast",
+    "originalName": null,
+    "category": "te_nero",
+    "countryOfOrigin": "Regno Unito",
+    "region": "Miscela (Assam, Ceylon, Kenya)",
+    "caffeine": "alta",
+    "temperatureC": [95, 100],
+    "infusionSec": [180, 300],
+    "aromas": ["Maltato", "Tannico", "Terroso", "Robusto"],
+    "history": "Blend nato nella tradizione britannica del XIX secolo, pensato per reggere al latte e ai sapori forti della colazione inglese. Malgrado il nome, fu probabilmente creato in Scozia intorno al 1843. La Regina Vittoria ne diffuse la moda dopo averlo apprezzato a Balmoral, portandolo a diventare il tè più consumato nel mondo anglosassone.",
+    "preparation": "Usa 3 g di foglie per 200 ml di acqua bollente (95-100°C). Infondi per 3-5 minuti. Tradizionalmente bevuto con latte freddo (aggiunto nella tazza prima o dopo, ancora oggetto di dibattito britannico) e opzionalmente zucchero.",
+    "funFacts": [
+      "Non esiste una ricetta fissa: ogni produttore ha la sua proporzione di Assam, Ceylon e Kenya",
+      "I britannici consumano circa 100 milioni di tazze di tè al giorno, per lo più English Breakfast",
+      "Il dibattito 'milk in first' (MIF) o 'milk in last' (MIL) è storicamente legato alla classe sociale: MIF era abitudine delle classi povere che temevano di rompere le tazze economiche con l'acqua bollente"
+    ]
+  },
+  {
+    "id": "tie_guan_yin",
+    "name": "Tie Guan Yin",
+    "originalName": "铁观音",
+    "category": "oolong",
+    "countryOfOrigin": "Cina",
+    "region": "Anxi, Fujian",
+    "caffeine": "media",
+    "temperatureC": [90, 95],
+    "infusionSec": [30, 60],
+    "aromas": ["Floreale", "Cremoso", "Fruttato", "Dolce"],
+    "history": "Uno degli oolong più famosi al mondo, il cui nome significa 'Dea di Ferro della Misericordia' (Guanyin). La leggenda narra che intorno al 1725 un contadino devoto alla dea Guanyin, Wei Yin, trovò tra le rocce vicino alla sua statua abbandonata una rara pianta di tè, che divenne la varietà madre.",
+    "preparation": "Usa 5-7 g di foglie per 100-150 ml di acqua a 90-95°C nel gaiwan o teiera gongfu. Prima infusione 30 secondi, aumentando di 10-15 secondi alle reinfusioni successive. Le stesse foglie si possono infondere 6-8 volte.",
+    "funFacts": [
+      "Esistono due stili principali: qing xiang (profumo leggero, più verde e floreale) e nong xiang (profumo intenso, più tostato e persistente)",
+      "Le foglie vengono arrotolate in piccole perle che si aprono durante l'infusione, rivelando foglie intere di notevole dimensione",
+      "Il grado di ossidazione varia dal 15% al 40%, rendendo ogni produttore e stagione unicamente diversi"
+    ]
+  },
+  {
+    "id": "da_hong_pao",
+    "name": "Da Hong Pao",
+    "originalName": "大红袍",
+    "category": "oolong",
+    "countryOfOrigin": "Cina",
+    "region": "Monte Wuyi, Fujian",
+    "caffeine": "media",
+    "temperatureC": [95, 100],
+    "infusionSec": [30, 60],
+    "aromas": ["Terroso", "Tostato", "Fruttato", "Minerale"],
+    "history": "Il tè più pregiato della tradizione cinese, cresciuto sulle rupi del Monte Wuyi patrimonio UNESCO. Il nome 'Grande Veste Rossa' deriva dalla leggenda di uno studente della dinastia Ming guarito dal tè di queste piante, che drappeggiò in segno di gratitudine la sua veste rossa sugli arbusti.",
+    "preparation": "Usa 5-7 g di foglie per 100 ml di acqua a 95-100°C nel gaiwan. Prima infusione 30 secondi, poi aumenta gradualmente. L'acqua di fonte o minerale leggera esalta il minerale caratteristico delle rocce Wuyi. Le foglie reggono 8-10 infusioni.",
+    "funFacts": [
+      "Le 4 piante madri originali sul Monte Wuyi producono meno di 500 g di tè all'anno, ceduto solo a doni di Stato",
+      "Tutto il Da Hong Pao commerciale deriva da cloni propagati vegetativamente, non dalle piante originali",
+      "Il Monte Wuyi è sito UNESCO sia per l'ecosistema naturale sia per la storia culturale legata alla tradizione del tè"
+    ]
+  },
+  {
+    "id": "dong_ding",
+    "name": "Dong Ding",
+    "originalName": "凍頂烏龍",
+    "category": "oolong",
+    "countryOfOrigin": "Taiwan",
+    "region": "Nantou",
+    "caffeine": "media",
+    "temperatureC": [85, 95],
+    "infusionSec": [60, 120],
+    "aromas": ["Floreale", "Tostato", "Cremoso", "Fruttato"],
+    "history": "Il più celebre oolong taiwanese, prodotto sul monte Dong Ding ('Vetta Ghiacciata') nel Nantou County a 700-1.200 m. I semi originali furono portati dal Fujian nel 1855 da Lin Feng-Chi, un funzionario che li ricevette dal maestro Fujian Ling Yin. La versione tradizionale viene tostata più volte per sviluppare note caramellate.",
+    "preparation": "Usa 5-7 g di foglie per 150 ml di acqua a 85-95°C. Infondi 1-2 minuti per la prima infusione. La versione tostata regge bene temperature più alte; la versione verde preferisce 85°C. Le foglie si reinfondono facilmente 5-6 volte.",
+    "funFacts": [
+      "Il grado di ossidazione è del 30-40%, a metà tra un tè verde e uno completamente ossidato",
+      "La tecnica di arrotolamento a sfera avviene in più fasi alternate a brevi tostature, un processo lungo diverse ore",
+      "Esiste una distinzione netta tra Dong Ding 'tradizionale' (più tostato e robusto) e 'moderno' (più verde e floreale)"
+    ]
+  },
+  {
+    "id": "alishan",
+    "name": "Alishan High Mountain",
+    "originalName": "阿里山高山茶",
+    "category": "oolong",
+    "countryOfOrigin": "Taiwan",
+    "region": "Chiayi",
+    "caffeine": "media",
+    "temperatureC": [85, 95],
+    "infusionSec": [60, 120],
+    "aromas": ["Floreale", "Cremoso", "Dolce", "Fresco"],
+    "history": "Prodotto sui monti Alishan a Chiayi, tra 1.000 e 1.800 m di quota. Le nebbie mattutine e le escursioni termiche tra giorno e notte rallentano la crescita delle foglie, concentrandone gli aromi. La produzione espanse significativamente dagli anni '70 quando Taiwan sviluppò la sua identità nei tè di alta montagna.",
+    "preparation": "Usa 5-7 g di foglie per 150 ml di acqua a 85-95°C. Prima infusione 60-90 secondi. Il profilo latteo-floreale è delicato: non superare i 90°C per preservarlo. Le foglie si aprono bellissime e si reinfondono 5-7 volte.",
+    "funFacts": [
+      "L'alta quota (sopra i 1.000 m) allunga il ciclo di crescita e aumenta il contenuto di teanina, l'aminoacido responsabile del sapore dolce e della nota lattiginosa",
+      "Viene raccolto tre volte l'anno: primavera, estate e inverno, con il raccolto invernale considerato il migliore",
+      "Le piante vengono fatte crescere in bambinetti nebbiosi: il 60-70% del tempo la piantagione è avvolta dalla nebbia"
+    ]
+  },
+  {
+    "id": "dan_cong",
+    "name": "Phoenix Dan Cong",
+    "originalName": "凤凰单丛",
+    "category": "oolong",
+    "countryOfOrigin": "Cina",
+    "region": "Chaozhou, Guangdong",
+    "caffeine": "media",
+    "temperatureC": [90, 95],
+    "infusionSec": [30, 60],
+    "aromas": ["Floreale", "Mielato", "Fruttato", "Speziato"],
+    "history": "Dal Monte Phoenix (Fenghuang Shan) vicino a Chaozhou, il Dan Cong deve il nome all'usanza di raccogliere ogni arbusto separatamente ('ceppo singolo'). Alcuni alberi antichi del Monte Phoenix hanno oltre 600 anni. Ogni varietà imita un aroma naturale: orchidea, miele, fiore di zenzero, mandorla.",
+    "preparation": "Usa 5-7 g di foglie per 100 ml di acqua a 90-95°C nel gaiwan. Infusioni brevi: 20-30 secondi la prima, aumentando gradualmente. L'intensità aromatica è elevata: meglio poco tè che troppo. Le foglie reggono 10 o più infusioni.",
+    "funFacts": [
+      "Esistono oltre 80 varietà nominate di Dan Cong, ciascuna con un aroma naturale distinto senza aggiunta di aromi artificiali",
+      "La varietà più pregiata, Mi Lan Xiang (Profumo di Orchidea e Miele), proviene da alberi antichi a quote superiori ai 1.200 m",
+      "Alcuni arbusti del Monte Phoenix hanno più di 600 anni e producono pochi etti di tè all'anno, venduto a prezzi straordinari"
+    ]
+  },
+  {
     "id": "camomilla",
     "name": "Camomilla",
     "originalName": "Matricaria chamomilla",
@@ -92,6 +434,139 @@
       "Non contiene teina né caffeina, adatto anche a bambini e sera tarda",
       "Ha 50 volte meno tannini del tè nero, quindi non diventa amaro con infusioni lunghe",
       "Esiste anche il rooibos verde, non ossidato, con profilo più erbaceo e leggero"
+    ]
+  },
+  {
+    "id": "menta_piperita",
+    "name": "Menta Piperita",
+    "originalName": "Mentha x piperita",
+    "category": "tisana",
+    "countryOfOrigin": "Europa",
+    "region": "Coltivata principalmente in Francia, USA, India",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [300, 420],
+    "aromas": ["Fresco", "Mentolato", "Erbaceo", "Balsamico"],
+    "history": "Ibrido naturale tra menta acquatica e menta verde, documentato per la prima volta da Carl Linnaeus nel 1753. Usata medicinalmente nell'Egitto antico e nella Grecia classica, nel XIX secolo la regione di Mitcham nel Surrey divenne il centro mondiale della sua coltivazione.",
+    "preparation": "Infondi 1-2 cucchiaini di foglie essiccate (o una manciata di foglie fresche) in 200 ml di acqua bollente. Copri e lascia 5-7 minuti. Ottima dopo i pasti per la digestione, o fredda d'estate con ghiaccio e limone.",
+    "funFacts": [
+      "Il mentolo attiva i recettori del freddo (TRPM8) creando la sensazione di fresco senza abbassare realmente la temperatura",
+      "Aiuta la digestione rilassando il muscolo sfintere tra esofago e stomaco, favorendo il rilascio di gas",
+      "La menta di Mitcham era così pregiata che le sue varietà sono ancora oggi denominate con quel nome"
+    ]
+  },
+  {
+    "id": "zenzero_limone",
+    "name": "Zenzero e Limone",
+    "originalName": null,
+    "category": "tisana",
+    "countryOfOrigin": "India",
+    "region": "Tradizione ayurvedica del subcontinente indiano",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [300, 420],
+    "aromas": ["Speziato", "Agrumato", "Pungente", "Fresco"],
+    "history": "Combinazione nata dalla medicina ayurvedica, dove lo zenzero (adrak) è usato da oltre 5.000 anni. In India questo infuso è chiamato kadha ed è il rimedio tradizionale per raffreddori e nausea. La diffusione in Europa avvenne nel XX secolo come bevanda wellness, consolidandosi come uno degli infusi più venduti al mondo.",
+    "preparation": "Affetta 3-4 cm di radice fresca di zenzero e fai bollire in 300 ml di acqua per 10 minuti. Filtra, aggiungi il succo di mezzo limone e miele a piacere. Con zenzero in polvere bastano 1-2 g in infusione per 5 minuti.",
+    "funFacts": [
+      "Lo zenzero contiene gingeroli e shogaoli, composti con documentata efficacia contro la nausea anche in gravidanza",
+      "Il limone non solo aggiunge vitamina C ma abbassa il pH, aiutando l'estrazione dei principi attivi dallo zenzero",
+      "In India durante l'epidemia di COVID-19 il consumo di kadha aumentò del 300%, riflettendo la fiducia popolare nei rimedi tradizionali"
+    ]
+  },
+  {
+    "id": "ibisco",
+    "name": "Ibisco",
+    "originalName": "Hibiscus sabdariffa",
+    "category": "tisana",
+    "countryOfOrigin": "Africa Occidentale",
+    "region": "Coltivato in Egitto, Senegal, Messico, India",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [300, 420],
+    "aromas": ["Fruttato", "Agrumato", "Floreale", "Acidulo"],
+    "history": "I calici essiccati di Hibiscus sabdariffa sono usati come bevanda e medicina nell'Africa occidentale da secoli. In Egitto era un beveraggio reale, chiamato karkadè. In Senegal il bissap è pressoché la bevanda nazionale, mentre in Messico l'agua de Jamaica è onnipresente.",
+    "preparation": "Infondi 5-8 g di calici essiccati in 500 ml di acqua bollente per 5-7 minuti. Filtra e aggiungi miele o zucchero a piacere. Ottimo caldo d'inverno, ma eccellente anche freddo con ghiaccio e menta fresca come bibita estiva.",
+    "funFacts": [
+      "Il colore rosso intenso è dovuto alle antocianine, pigmenti con forte potere antiossidante",
+      "Studi clinici hanno mostrato una riduzione della pressione sistolica simile a quella dei farmaci ACE-inibitori in soggetti ipertesi lievi",
+      "In Senegal il bissap viene bevuto in media 3-4 volte al giorno ed è offerto agli ospiti come segno di ospitalità"
+    ]
+  },
+  {
+    "id": "lavanda",
+    "name": "Lavanda",
+    "originalName": "Lavandula angustifolia",
+    "category": "tisana",
+    "countryOfOrigin": "Mediterraneo",
+    "region": "Provenza, Francia",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [300, 420],
+    "aromas": ["Floreale", "Balsamico", "Dolce", "Erbaceo"],
+    "history": "Il nome deriva dal latino lavare: i Romani la usavano nei bagni pubblici. La Provenza divenne il centro mondiale della coltivazione a partire dal XVI secolo. L'uso come tisana si diffuse nell'era vittoriana in Inghilterra, dove veniva bevuta per i nervi e il mal di testa.",
+    "preparation": "Usa 1-2 cucchiaini di fiori essiccati per 200 ml di acqua bollente. Non eccedere: troppa lavanda diventa amara e saponosa. Infondi 5-7 minuti coperti. Ottima la sera, eventualmente con miele di acacia.",
+    "funFacts": [
+      "Il linalolo, il principale terpene della lavanda, ha documentata attività sedativa interagendo con i recettori GABA-A",
+      "La Provenza produce ogni anno circa 1.000 tonnellate di olio essenziale di lavanda, usato in profumeria, cosmetica e alimentazione",
+      "I campi di lavanda fioriscono per sole 4-6 settimane in luglio, da cui la breve finestra di raccolta"
+    ]
+  },
+  {
+    "id": "tiglio",
+    "name": "Tiglio",
+    "originalName": "Tilia cordata",
+    "category": "tisana",
+    "countryOfOrigin": "Europa",
+    "region": "Coltivato in Francia, Ungheria, Bulgaria",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [300, 420],
+    "aromas": ["Floreale", "Mielato", "Dolce", "Erbaceo"],
+    "history": "L'infuso di fiori di tiglio è citato già nel XII secolo da Hildegard von Bingen tra le erbe officinali. In Francia il tilleul è il rimedio serale per eccellenza, diffuso in ogni famiglia. I Romani piantavano tigli nelle piazze e i fiori erano simbolo di pace e benevolenza.",
+    "preparation": "Infondi 2 cucchiaini di fiori e brattee essiccati in 200 ml di acqua bollente per 5-7 minuti coperti. I fiori di tiglio vanno raccolti in una finestra di pochi giorni: secchi perdono aroma rapidamente. Bevi caldo la sera, con un cucchiaino di miele.",
+    "funFacts": [
+      "I fiori vanno raccolti con la brattea: la fogliolina verde che li accompagna contiene oli essenziali fondamentali per l'azione calmante",
+      "Contiene tiliroside e quercetina, flavonoidi con documentate proprietà ansiolitiche in studi su modelli animali",
+      "In Francia si raccolgono circa 8.000 tonnellate di fiori di tiglio all'anno, rendendolo l'erboristeria più commercializzata del paese"
+    ]
+  },
+  {
+    "id": "melissa",
+    "name": "Melissa",
+    "originalName": "Melissa officinalis",
+    "category": "tisana",
+    "countryOfOrigin": "Mediterraneo orientale",
+    "region": "Coltivata in tutta Europa, originaria del Caucaso",
+    "caffeine": "assente",
+    "temperatureC": [90, 95],
+    "infusionSec": [300, 420],
+    "aromas": ["Agrumato", "Erbaceo", "Dolce", "Fresco"],
+    "history": "Paracelsus nel XVI secolo la chiamava 'elisir di vita'. I monaci medievali la coltivavano negli orti dei monasteri come erba della mente. Il nome deriva dal greco melissa (ape), perché le sue foglie attirano le api. Avicenna la descriveva come rimedio per la malinconia già nell'XI secolo.",
+    "preparation": "Usa 2-3 cucchiaini di foglie fresche (o 1 cucchiaino di essiccate) per 200 ml di acqua a 90-95°C. Infondi 5-7 minuti coperti. Le foglie fresche danno un aroma più vivace di quelle essiccate. Ottima da sola o in blend con valeriana per l'insonnia.",
+    "funFacts": [
+      "L'acido rosmarinico della melissa inibisce l'enzima che degrada il GABA, aumentando i livelli di questo neurotrasmettitore calmante",
+      "Combinata con valeriana, è una delle coppie botaniche più studiate per ansia e insonnia, con studi clinici pubblicati su riviste peer-reviewed",
+      "Le foglie fresche schiacciate rilasciano un profumo di limone intenso: anticamente erano usate per strofinare gli alveari e attirare nuovi sciami"
+    ]
+  },
+  {
+    "id": "rosa_canina",
+    "name": "Rosa Canina",
+    "originalName": "Rosa canina",
+    "category": "tisana",
+    "countryOfOrigin": "Europa",
+    "region": "Coltivata in Chile, Europa dell'Est, Turchia",
+    "caffeine": "assente",
+    "temperatureC": [95, 100],
+    "infusionSec": [420, 600],
+    "aromas": ["Fruttato", "Floreale", "Agrumato", "Dolce"],
+    "history": "I cinorrodi (frutti) della rosa selvatica sono stati usati come alimento e medicina dall'età della pietra. Durante la Seconda Guerra Mondiale in Gran Bretagna, con le importazioni di agrumi bloccate dal conflitto, il governo lanciò campagne nazionali per la raccolta di cinorrodi come fonte di vitamina C per i bambini.",
+    "preparation": "Usa 3-4 g di cinorrodi essiccati e spezzati per 300 ml di acqua. Fai sobbollire per 10 minuti, poi lascia in infusione altri 10 minuti. I cinorrodi richiedono più tempo di fiori e foglie per rilasciare i loro principi. Filtra bene: i peli interni possono irritare la gola.",
+    "funFacts": [
+      "Contiene 20 volte più vitamina C per 100 g rispetto a un'arancia, rendendolo uno degli alimenti più ricchi in assoluto",
+      "Il governo britannico raccolse 450 tonnellate di cinorrodi selvatici ogni anno dal 1941 al 1945 per produrre sciroppo anti-scorbuto per i bambini",
+      "Contiene anche licopene, lo stesso antiossidante del pomodoro, e galactolipidi con potenziale effetto anti-infiammatorio"
     ]
   }
 ]
