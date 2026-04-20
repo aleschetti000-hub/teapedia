@@ -22,16 +22,6 @@ class TeaDetailScreen extends StatelessWidget {
     }
   }
 
-  static String _categoryLabel(String categoryId) {
-    switch (categoryId) {
-      case 'te_verde': return 'Tè verde';
-      case 'te_nero':  return 'Tè nero';
-      case 'oolong':   return 'Oolong';
-      case 'tisana':   return 'Tisana';
-      default:         return categoryId;
-    }
-  }
-
   static String _caffeineLabel(String caffeine) {
     switch (caffeine) {
       case 'assente': return 'Assente';
@@ -48,72 +38,78 @@ class TeaDetailScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: CustomScrollView(
-        slivers: [
-          // Header colorato con nome tè
-          SliverAppBar(
-            expandedHeight: 160,
-            pinned: true,
-            backgroundColor: style.background,
-            foregroundColor: style.text,
-            surfaceTintColor: Colors.transparent,
-            flexibleSpace: FlexibleSpaceBar(
-              collapseMode: CollapseMode.pin,
-              background: Container(
-                color: style.background,
-                padding: const EdgeInsets.fromLTRB(20, 80, 20, 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      _categoryLabel(tea.category).toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w600,
-                        color: style.dot,
-                        letterSpacing: 1.2,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      tea.name,
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                        color: style.text,
-                      ),
-                    ),
-                    if (tea.originalName != null)
-                      Text(
-                        tea.originalName!,
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: style.text.withValues(alpha: 0.55),
-                        ),
-                      ),
-                  ],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Header colorato fisso con freccia back integrata
+          Container(
+            width: double.infinity,
+            color: style.background,
+            padding: EdgeInsets.fromLTRB(4, MediaQuery.of(context).padding.top + 4, 20, 18),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.arrow_back, color: style.text),
+                  onPressed: () => Navigator.pop(context),
                 ),
-              ),
+                const SizedBox(width: 4),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          tea.name,
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w600,
+                            color: style.text,
+                          ),
+                        ),
+                        if (tea.originalName != null) ...[
+                          const SizedBox(height: 2),
+                          Text(
+                            tea.originalName!,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: style.text.withValues(alpha: 0.55),
+                            ),
+                          ),
+                        ],
+                        const SizedBox(height: 4),
+                        Text(
+                          '${tea.countryOfOrigin} · ${tea.region}',
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: style.text.withValues(alpha: 0.65),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
 
-          SliverToBoxAdapter(
-            child: Padding(
+          // Contenuto scrollabile
+          Expanded(
+            child: SingleChildScrollView(
+              physics: const ClampingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 24),
 
-                  // Scheda tecnica
                   _SectionTitle('Scheda tecnica'),
                   const SizedBox(height: 10),
                   _TechCard(tea: tea, style: style),
 
                   const SizedBox(height: 24),
 
-                  // Aromi
                   _SectionTitle('Aromi'),
                   const SizedBox(height: 10),
                   Wrap(
@@ -141,38 +137,30 @@ class TeaDetailScreen extends StatelessWidget {
 
                   const SizedBox(height: 24),
 
-                  // Preparazione
                   _SectionTitle('Preparazione'),
                   const SizedBox(height: 8),
                   Text(
                     tea.preparation,
                     style: const TextStyle(
-                      fontSize: 14,
-                      height: 1.6,
-                      color: Colors.black87,
-                    ),
+                        fontSize: 14, height: 1.6, color: Colors.black87),
                   ),
 
                   const SizedBox(height: 24),
 
-                  // Storia
                   _SectionTitle('Storia'),
                   const SizedBox(height: 8),
                   Text(
                     tea.history,
                     style: const TextStyle(
-                      fontSize: 14,
-                      height: 1.6,
-                      color: Colors.black87,
-                    ),
+                        fontSize: 14, height: 1.6, color: Colors.black87),
                   ),
 
                   const SizedBox(height: 24),
 
-                  // Fun facts
                   _SectionTitle('Lo sapevi?'),
                   const SizedBox(height: 10),
-                  ...tea.funFacts.map((fact) => _FunFactRow(fact: fact, dot: style.dot)),
+                  ...tea.funFacts.map(
+                      (fact) => _FunFactRow(fact: fact, dot: style.dot)),
 
                   const SizedBox(height: 40),
                 ],
@@ -185,7 +173,6 @@ class TeaDetailScreen extends StatelessWidget {
   }
 }
 
-// Scheda tecnica con 4 metriche in griglia 2x2
 class _TechCard extends StatelessWidget {
   final Tea tea;
   final _CategoryStyle style;
@@ -196,8 +183,8 @@ class _TechCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final tempMin = tea.temperatureC[0];
     final tempMax = tea.temperatureC[1];
-    final infMin  = (tea.infusionSec[0] / 60).round();
-    final infMax  = (tea.infusionSec[1] / 60).round();
+    final infMin = (tea.infusionSec[0] / 60).round();
+    final infMax = (tea.infusionSec[1] / 60).round();
 
     return Container(
       padding: const EdgeInsets.all(14),
@@ -272,9 +259,7 @@ class _TechItem extends StatelessWidget {
                   width: 7,
                   height: 7,
                   decoration: BoxDecoration(
-                    color: dotColor,
-                    shape: BoxShape.circle,
-                  ),
+                      color: dotColor, shape: BoxShape.circle),
                 ),
                 const SizedBox(width: 5),
               ],
@@ -323,10 +308,7 @@ class _FunFactRow extends StatelessWidget {
             child: Text(
               fact,
               style: const TextStyle(
-                fontSize: 14,
-                height: 1.5,
-                color: Colors.black87,
-              ),
+                  fontSize: 14, height: 1.5, color: Colors.black87),
             ),
           ),
         ],

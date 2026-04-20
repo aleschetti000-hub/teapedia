@@ -15,7 +15,22 @@ class TeapediaApp extends StatelessWidget {
       title: 'Teapedia',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
+      scrollBehavior: const _NoOverscrollBehavior(),
       home: const HomeScreen(),
     );
+  }
+}
+
+// Rimuove glow e stretch di Android su tutti gli scrollable dell'app
+class _NoOverscrollBehavior extends ScrollBehavior {
+  const _NoOverscrollBehavior();
+
+  @override
+  Widget buildOverscrollIndicator(
+    BuildContext context,
+    Widget child,
+    ScrollableDetails details,
+  ) {
+    return child;
   }
 }

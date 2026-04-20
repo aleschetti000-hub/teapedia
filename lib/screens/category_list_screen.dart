@@ -63,6 +63,7 @@ class CategoryListScreen extends StatelessWidget {
           }
 
           return ListView.separated(
+            physics: const ClampingScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             itemCount: teas.length,
             separatorBuilder: (_, __) => const SizedBox(height: 10),
