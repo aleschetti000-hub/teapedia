@@ -15,8 +15,25 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.6
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/icon/teapedia_splash_logo.png
+  android_12:
+    icon_background_color: "#FFFFFF"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/teapedia_icon_1024.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/icon/teapedia_icon_adaptive_foreground.png"
 
 flutter:
   uses-material-design: true
   assets:
     - assets/data/teas.json
+    - assets/icon/
