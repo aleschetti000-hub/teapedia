@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/tea.dart';
 import '../theme/app_theme.dart';
+import 'new_tasting_sheet.dart';
 
 class TeaDetailScreen extends StatelessWidget {
   final Tea tea;
@@ -38,6 +39,35 @@ class TeaDetailScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () async {
+          final saved = await showModalBottomSheet<bool>(
+            context: context,
+            isScrollControlled: true,
+            backgroundColor: Colors.white,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+            ),
+            clipBehavior: Clip.antiAlias,
+            builder: (_) => NewTastingSheet(tea: tea),
+          );
+          if (saved == true && context.mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: const Text('Degustazione aggiunta al diario'),
+                action: SnackBarAction(
+                  label: 'Vedi diario',
+                  onPressed: () {},
+                ),
+              ),
+            );
+          }
+        },
+        label: const Text('Aggiungi al diario'),
+        icon: const Icon(Icons.add),
+        backgroundColor: AppTheme.primaryGreen,
+        foregroundColor: Colors.white,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
