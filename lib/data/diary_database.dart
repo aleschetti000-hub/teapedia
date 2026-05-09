@@ -18,8 +18,13 @@ class DiaryDatabase {
 
     return openDatabase(
       path,
-      version: 1,
+      version: 2,
       onCreate: _createTables,
+      onUpgrade: (db, oldVersion, newVersion) async {
+        await db.execute('DROP TABLE IF EXISTS tasting');
+        await db.execute('DROP TABLE IF EXISTS tea_personal');
+        await _createTables(db, newVersion);
+      },
     );
   }
 
@@ -40,7 +45,7 @@ class DiaryDatabase {
         id      INTEGER PRIMARY KEY AUTOINCREMENT,
         tea_id  TEXT    NOT NULL,
         date    INTEGER NOT NULL,
-        rating  INTEGER NOT NULL,
+        rating  REAL    NOT NULL,
         aromas  TEXT    NOT NULL,
         notes   TEXT,
         FOREIGN KEY (tea_id) REFERENCES tea_personal (tea_id)

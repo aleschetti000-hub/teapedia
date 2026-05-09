@@ -135,7 +135,7 @@ class DiaryRepository {
     );
 
     final count = tastings.length;
-    final ratings = tastings.map((r) => (r['rating'] as int)).toList();
+    final ratings = tastings.map((r) => (r['rating'] as num).toDouble()).toList();
     final avg = ratings.reduce((a, b) => a + b) / count;
     final firstDate = tastings.first['date'] as int;
     final lastDate = tastings.last['date'] as int;

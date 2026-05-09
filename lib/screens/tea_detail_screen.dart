@@ -39,35 +39,6 @@ class TeaDetailScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () async {
-          final saved = await showModalBottomSheet<bool>(
-            context: context,
-            isScrollControlled: true,
-            backgroundColor: Colors.white,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-            ),
-            clipBehavior: Clip.antiAlias,
-            builder: (_) => NewTastingSheet(tea: tea),
-          );
-          if (saved == true && context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: const Text('Degustazione aggiunta al diario'),
-                action: SnackBarAction(
-                  label: 'Vedi diario',
-                  onPressed: () {},
-                ),
-              ),
-            );
-          }
-        },
-        label: const Text('Aggiungi al diario'),
-        icon: const Icon(Icons.add),
-        backgroundColor: AppTheme.primaryGreen,
-        foregroundColor: Colors.white,
-      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -192,7 +163,51 @@ class TeaDetailScreen extends StatelessWidget {
                   ...tea.funFacts.map(
                       (fact) => _FunFactRow(fact: fact, dot: style.dot)),
 
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 24),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: ElevatedButton.icon(
+                      onPressed: () async {
+                        final saved = await showModalBottomSheet<bool>(
+                          context: context,
+                          isScrollControlled: true,
+                          backgroundColor: Colors.white,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(16)),
+                          ),
+                          clipBehavior: Clip.antiAlias,
+                          builder: (_) => NewTastingSheet(tea: tea),
+                        );
+                        if (saved == true && context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Degustazione aggiunta al diario'),
+                              duration: Duration(seconds: 7),
+                            ),
+                          );
+                        }
+                      },
+                      icon: const Icon(Icons.add),
+                      label: const Text(
+                        'Aggiungi al diario',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppTheme.primaryGreen,
+                        foregroundColor: Colors.white,
+                        elevation: 0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 32),
                 ],
               ),
             ),

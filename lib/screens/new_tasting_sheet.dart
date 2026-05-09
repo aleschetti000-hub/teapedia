@@ -13,7 +13,8 @@ class NewTastingSheet extends StatefulWidget {
 }
 
 class _NewTastingSheetState extends State<NewTastingSheet> {
-  int _rating = 0;
+  double _rating = 0.0;
+  bool _showRatingError = false;
   final Set<String> _selectedAromas = {};
   final TextEditingController _notesController = TextEditingController();
   bool _saving = false;
@@ -35,11 +36,24 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
     return '${dt.day} ${months[dt.month - 1]} ${dt.year}, $h:$m';
   }
 
+  void _tapStar(int index) {
+    setState(() {
+      final full = index + 1.0;
+      final half = index + 0.5;
+      if (_rating >= full) {
+        _rating = half;
+      } else if (_rating >= half) {
+        _rating = index.toDouble();
+      } else {
+        _rating = full;
+      }
+      if (_rating > 0.0) _showRatingError = false;
+    });
+  }
+
   Future<void> _save() async {
-    if (_rating == 0) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Seleziona almeno una stella')),
-      );
+    if (_rating == 0.0) {
+      setState(() => _showRatingError = true);
       return;
     }
 
@@ -63,6 +77,7 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
           const SnackBar(
             content: Text('Errore nel salvataggio, riprova'),
             backgroundColor: Colors.red,
+            duration: Duration(seconds: 7),
           ),
         );
       }
@@ -122,16 +137,23 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
                   const SizedBox(height: 10),
                   Row(
                     children: List.generate(5, (i) {
-                      final filled = i < _rating;
+                      final full = i + 1.0;
+                      final half = i + 0.5;
+                      final IconData icon;
+                      if (_rating >= full) {
+                        icon = Icons.star_rounded;
+                      } else if (_rating >= half) {
+                        icon = Icons.star_half_rounded;
+                      } else {
+                        icon = Icons.star_outline_rounded;
+                      }
                       return GestureDetector(
-                        onTap: () => setState(() => _rating = i + 1),
+                        onTap: () => _tapStar(i),
                         child: Padding(
                           padding: const EdgeInsets.only(right: 4),
                           child: Icon(
-                            filled
-                                ? Icons.star_rounded
-                                : Icons.star_outline_rounded,
-                            color: filled
+                            icon,
+                            color: _rating >= half
                                 ? const Color(0xFFBA7517)
                                 : Colors.black26,
                             size: 38,
@@ -140,6 +162,17 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
                       );
                     }),
                   ),
+                  if (_showRatingError) ...[
+                    const SizedBox(height: 6),
+                    const Text(
+                      'Seleziona almeno una stella per salvare',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic,
+                        color: Color(0xFFA32D2D),
+                      ),
+                    ),
+                  ],
 
                   const SizedBox(height: 24),
                   const _SectionLabel('AROMI PERCEPITI'),

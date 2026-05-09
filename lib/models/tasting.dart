@@ -4,7 +4,7 @@ class Tasting {
   final int? id;
   final String teaId;
   final DateTime date;
-  final int rating;
+  final double rating;
   final List<String> aromas;
   final String? notes;
 
@@ -22,7 +22,7 @@ class Tasting {
       id: map['id'] as int?,
       teaId: map['tea_id'] as String,
       date: DateTime.fromMillisecondsSinceEpoch(map['date'] as int),
-      rating: map['rating'] as int,
+      rating: (map['rating'] as num).toDouble(),
       aromas: List<String>.from(jsonDecode(map['aromas'] as String)),
       notes: map['notes'] as String?,
     );
