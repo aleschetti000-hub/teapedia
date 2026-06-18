@@ -48,5 +48,25 @@ class AppTheme {
       bodyMedium: TextStyle(fontSize: 14, height: 1.5),
       bodySmall: TextStyle(fontSize: 12, color: Colors.black54),
     ),
+    navigationBarTheme: NavigationBarThemeData(
+      backgroundColor: Colors.white,
+      indicatorColor: lightGreen,
+      iconTheme: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return const IconThemeData(color: primaryGreen);
+        }
+        return const IconThemeData(color: Colors.black54);
+      }),
+      labelTextStyle: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return const TextStyle(
+            color: primaryGreen,
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+          );
+        }
+        return const TextStyle(color: Colors.black54, fontSize: 12);
+      }),
+    ),
   );
 }

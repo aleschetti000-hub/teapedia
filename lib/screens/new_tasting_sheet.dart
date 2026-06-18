@@ -6,19 +6,33 @@ import '../theme/app_theme.dart';
 
 class NewTastingSheet extends StatefulWidget {
   final Tea tea;
-  const NewTastingSheet({super.key, required this.tea});
+  final Tasting? tasting; // null = nuova degustazione, non-null = modifica
+
+  const NewTastingSheet({super.key, required this.tea, this.tasting});
 
   @override
   State<NewTastingSheet> createState() => _NewTastingSheetState();
 }
 
 class _NewTastingSheetState extends State<NewTastingSheet> {
-  double _rating = 0.0;
+  late double _rating;
   bool _showRatingError = false;
-  final Set<String> _selectedAromas = {};
+  late final Set<String> _selectedAromas;
   final TextEditingController _notesController = TextEditingController();
   bool _saving = false;
-  final DateTime _date = DateTime.now();
+  late final DateTime _date;
+
+  bool get _isEditing => widget.tasting != null;
+
+  @override
+  void initState() {
+    super.initState();
+    final t = widget.tasting;
+    _date = t?.date ?? DateTime.now();
+    _rating = t?.rating ?? 0.0;
+    _selectedAromas = t != null ? {...t.aromas} : {};
+    if (t?.notes != null) _notesController.text = t!.notes!;
+  }
 
   @override
   void dispose() {
@@ -60,7 +74,8 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
     setState(() => _saving = true);
 
     try {
-      await DiaryRepository().addTasting(Tasting(
+      final tasting = Tasting(
+        id: widget.tasting?.id,
         teaId: widget.tea.id,
         date: _date,
         rating: _rating,
@@ -68,7 +83,12 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
         notes: _notesController.text.trim().isEmpty
             ? null
             : _notesController.text.trim(),
-      ));
+      );
+      if (_isEditing) {
+        await DiaryRepository().updateTasting(tasting);
+      } else {
+        await DiaryRepository().addTasting(tasting);
+      }
       if (mounted) Navigator.pop(context, true);
     } catch (_) {
       if (mounted) {
@@ -119,7 +139,9 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Nuova degustazione di ${widget.tea.name}',
+                    _isEditing
+                        ? 'Modifica degustazione di ${widget.tea.name}'
+                        : 'Nuova degustazione di ${widget.tea.name}',
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -288,8 +310,10 @@ class _NewTastingSheetState extends State<NewTastingSheet> {
                               color: Colors.white,
                             ),
                           )
-                        : const Text('Salva',
-                            style: TextStyle(fontSize: 16)),
+                        : Text(
+                            _isEditing ? 'Aggiorna' : 'Salva',
+                            style: const TextStyle(fontSize: 16),
+                          ),
                   ),
                 ),
               ],
