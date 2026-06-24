@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../models/tea.dart';
 import '../theme/app_theme.dart';
 import 'new_tasting_sheet.dart';
@@ -23,6 +24,16 @@ class TeaDetailScreen extends StatelessWidget {
     }
   }
 
+  static String _categoryName(String categoryId) {
+    switch (categoryId) {
+      case 'te_verde': return 'Tè verde';
+      case 'te_nero':  return 'Tè nero';
+      case 'oolong':   return 'Oolong';
+      case 'tisana':   return 'Tisana';
+      default:         return categoryId;
+    }
+  }
+
   static String _caffeineLabel(String caffeine) {
     switch (caffeine) {
       case 'assente': return 'Assente';
@@ -38,57 +49,102 @@ class TeaDetailScreen extends StatelessWidget {
     final style = _styleFor(tea.category);
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.favorite_border, color: Colors.white),
+            onPressed: () {},
+          ),
+        ],
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header colorato fisso con freccia back integrata
-          Container(
-            width: double.infinity,
-            color: style.background,
-            padding: EdgeInsets.fromLTRB(4, MediaQuery.of(context).padding.top + 4, 20, 18),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          // Header immagine (280px, include area dietro AppBar)
+          SizedBox(
+            height: 280,
+            child: Stack(
+              fit: StackFit.expand,
               children: [
-                IconButton(
-                  icon: Icon(Icons.arrow_back, color: style.text),
-                  onPressed: () => Navigator.pop(context),
+                Image.asset(
+                  'assets/images/teas/${tea.id}.jpg',
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => Container(color: style.background),
                 ),
-                const SizedBox(width: 4),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          tea.name,
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
-                            color: style.text,
-                          ),
-                        ),
-                        if (tea.originalName != null) ...[
-                          const SizedBox(height: 2),
-                          Text(
-                            tea.originalName!,
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: style.text.withValues(alpha: 0.55),
+                const DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.transparent, Color(0xA6000000)],
+                      stops: [0.2, 1.0],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: 18,
+                  left: 20,
+                  right: 20,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        tea.name,
+                        style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                          shadows: [
+                            Shadow(
+                              offset: Offset(0, 1),
+                              blurRadius: 2,
+                              color: Color(0x66000000),
                             ),
-                          ),
-                        ],
-                        const SizedBox(height: 4),
+                          ],
+                        ),
+                      ),
+                      if (tea.originalName != null) ...[
+                        const SizedBox(height: 3),
                         Text(
-                          '${tea.countryOfOrigin} · ${tea.region}',
+                          tea.originalName!,
                           style: TextStyle(
-                            fontSize: 13,
-                            color: style.text.withValues(alpha: 0.65),
+                            fontSize: 14,
+                            color: Colors.white.withValues(alpha: 0.9),
+                            shadows: const [
+                              Shadow(
+                                offset: Offset(0, 1),
+                                blurRadius: 2,
+                                color: Color(0x66000000),
+                              ),
+                            ],
                           ),
                         ),
                       ],
-                    ),
+                      const SizedBox(height: 4),
+                      Text(
+                        '${_categoryName(tea.category)} · ${tea.countryOfOrigin}',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.white.withValues(alpha: 0.85),
+                          shadows: const [
+                            Shadow(
+                              offset: Offset(0, 1),
+                              blurRadius: 2,
+                              color: Color(0x66000000),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],

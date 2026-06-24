@@ -208,10 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
               CategoryCard(
                 title: 'Tè verde',
                 count: countByCategory['te_verde'] ?? 0,
-                backgroundColor: AppTheme.bgGreen,
-                dotColor: AppTheme.teaGreen,
-                textColor: AppTheme.textGreen,
-                subtitleColor: const Color(0xFF3B6D11),
+                imagePath: 'assets/images/categories/te_verde.jpg',
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -225,10 +222,7 @@ class _HomeScreenState extends State<HomeScreen> {
               CategoryCard(
                 title: 'Tè nero',
                 count: countByCategory['te_nero'] ?? 0,
-                backgroundColor: AppTheme.bgBlack,
-                dotColor: AppTheme.teaBlack,
-                textColor: AppTheme.textBlack,
-                subtitleColor: const Color(0xFF791F1F),
+                imagePath: 'assets/images/categories/te_nero.jpg',
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -242,10 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
               CategoryCard(
                 title: 'Oolong',
                 count: countByCategory['oolong'] ?? 0,
-                backgroundColor: AppTheme.bgOolong,
-                dotColor: AppTheme.teaOolong,
-                textColor: AppTheme.textOolong,
-                subtitleColor: const Color(0xFF854F0B),
+                imagePath: 'assets/images/categories/oolong.jpg',
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -259,10 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
               CategoryCard(
                 title: 'Tisane',
                 count: countByCategory['tisana'] ?? 0,
-                backgroundColor: AppTheme.bgHerbal,
-                dotColor: AppTheme.teaHerbal,
-                textColor: AppTheme.textHerbal,
-                subtitleColor: const Color(0xFF3C3489),
+                imagePath: 'assets/images/categories/tisana.jpg',
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
